@@ -55,6 +55,8 @@ string [] CreateStringArray ()
 
 void PrintArray(string[] arr)
 {
+    if (arr.Length > 0)
+    {
     Console.Write("[");
     for (int i = 0; i < arr.Length - 1; i++)
     {
@@ -62,6 +64,11 @@ void PrintArray(string[] arr)
         
     }
     Console.WriteLine(arr[arr.Length - 1] + "]");
+    }
+    else
+    {
+        Console.WriteLine("[" + "]");
+    } 
 }
 
 string [] FirstArray = CreateStringArray ();
